@@ -1,0 +1,4 @@
+START TRANSACTION;
+INSERT INTO `media_type` (`mediatypeid`,`type`,`description`,`exec_path`,`status`,`smtp_port`,`smtp_security`,`smtp_verify_peer`,`smtp_verify_host`,`smtp_authentication`,`exec_params`) values (4, 1,'Slack','slack',0,25,0,0,0,0,'{ALERT.SENDTO}\n{ALERT.SUBJECT}\n{ALERT.MESSAGE}\n');
+UPDATE `actions` SET `def_longdata`='DATETIME: {DATE} {TIME}\r\nTRIGGER_STATUS: {TRIGGER.STATUS}\r\nTRIGGER_SEVERITY: {TRIGGER.SEVERITY}\r\nHOST: {HOST.NAME1}\r\nTRIGGER: {TRIGGER.NAME}\r\nITEM_NAME: {ITEM.NAME1}\r\nITEM_KEY: {ITEM.KEY1}\r\nITEM_VALUE: {ITEM.VALUE1}', `r_longdata`='DATETIME: {DATE} {TIME}\r\nTRIGGER_STATUS: {TRIGGER.STATUS}\r\nTRIGGER_SEVERITY: {TRIGGER.SEVERITY}\r\nHOST: {HOST.NAME1}\r\nTRIGGER: {TRIGGER.NAME}\r\nITEM_NAME: {ITEM.NAME1}\r\nITEM_KEY: {ITEM.KEY1}\r\nITEM_VALUE: {ITEM.VALUE1}' WHERE `name`='Report problems to Zabbix administrators';
+COMMIT;
