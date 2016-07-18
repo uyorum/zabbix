@@ -1,6 +1,8 @@
 # zabbix-3.0
 Customized docker image for Zabbix 3.0
 
+[![Build Status](https://travis-ci.org/uyorum/zsh-init-loader.svg?branch=master)](https://travis-ci.org/uyorum/zsh-init-loader)
+
 ## Customizations
 ### [uyorum/zabbix-alert-slack](https://github.com/uyorum/zabbix-alert-slack)
 * Register the script as a media
