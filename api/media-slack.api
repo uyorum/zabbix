@@ -1,0 +1,2 @@
+{"jsonrpc":"2.0","method":"mediatype.create","params":{"description":"Slack","type":1,"exec_path":"slack","exec_params":"{ALERT.SENDTO}\n{ALERT.SUBJECT}\n{ALERT.MESSAGE}\n"},"auth":"<AUTH_TOKEN>","id":<ID>}
+{"jsonrpc":"2.0","method":"mediatype.get","params":{"filter":{"description":"Slack"}},"auth":"<AUTH_TOKEN>","id":<ID>}
