@@ -30,6 +30,7 @@ test:
 	# Check Zabbix Web Interface status
 	curl -s -L --head http://127.0.0.1:$$(docker inspect --format='{{ (index (index .NetworkSettings.Ports "80/tcp") 0).HostPort }}' ${ZABBIX_CONTAINER}) | grep "HTTP/1.1 200 OK"
 	# Check if Slack media is registered
+	sleep 1
 	docker logs ${ZABBIX_CONTAINER} | grep "API response" | grep '"description":"Slack"'
 
 ## Clean

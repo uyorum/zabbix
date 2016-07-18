@@ -1,7 +1,7 @@
 # zabbix-3.0
-Customized docker image for Zabbix 3.0
+Customized docker image for Zabbix 3.0 based on [monitoringartist/zabbix-3.0-xxl](https://hub.docker.com/r/monitoringartist/zabbix-3.0-xxl/)
 
-[![Build Status](https://travis-ci.org/uyorum/zsh-init-loader.svg?branch=master)](https://travis-ci.org/uyorum/zsh-init-loader)
+[![Build Status](https://travis-ci.org/uyorum/zabbix-3.0.svg?branch=master)](https://travis-ci.org/uyorum/zabbix-3.0)
 
 ## Customizations
 ### [uyorum/zabbix-alert-slack](https://github.com/uyorum/zabbix-alert-slack)
@@ -10,7 +10,7 @@ Customized docker image for Zabbix 3.0
 
 ## Usage
 
-Same as [the base image](https://github.com/zabbix/zabbix-community-docker).
+Same as [the base image](https://hub.docker.com/r/monitoringartist/zabbix-3.0-xxl/)
 
 ``` shell
 docker run \
