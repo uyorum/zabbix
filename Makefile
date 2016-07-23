@@ -30,11 +30,11 @@ test:
 	while true; do if docker logs ${ZABBIX_CONTAINER} | grep "API call:"; then break; else sleep 1; fi done
 	## Check Zabbix Web Interface status
 	curl -s -L --head http://127.0.0.1:$$(docker inspect --format='{{ (index (index .NetworkSettings.Ports "80/tcp") 0).HostPort }}' ${ZABBIX_CONTAINER}) | grep "HTTP/1.1 200 OK"
+	sleep 3
 	## Check if slack alertscript is executable
 	docker exec ${ZABBIX_CONTAINER} stat -c '%a' /usr/local/share/zabbix/alertscripts/slack
 	test $$(docker exec ${ZABBIX_CONTAINER} stat -c '%a' /usr/local/share/zabbix/alertscripts/slack) -eq 755
 	## Check if Slack media is registered
-	sleep 1
 	docker logs ${ZABBIX_CONTAINER} | grep "API response" | grep '"description":"Slack"'
 
 ## Clean
