@@ -6,7 +6,7 @@ DB_PASS = db-password
 DB_CONTAINER = test-db
 ZABBIX_CONTAINER = test-zabbix
 
-BUILD ?= uyorum/zabbix-3.0
+BUILD ?= uyorum/zabbix
 
 ## Print all tasks
 help:
@@ -17,7 +17,7 @@ all: prepare test clean
 
 ## Pull latest images and launch db
 prepare:
-	docker pull monitoringartist/zabbix-3.0-xxl
+	docker pull monitoringartist/zabbix-xxl
 	docker pull ${DB_IMAGE}
 	docker run -d --name ${DB_CONTAINER} -e "MARIADB_USER=${DB_USER}" -e "MARIADB_PASS=${DB_PASS}" ${DB_IMAGE}
 	while true; do if docker logs ${DB_CONTAINER} | grep "ready for connections"; then break; else sleep 1; fi done

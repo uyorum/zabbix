@@ -1,7 +1,7 @@
-# zabbix-3.0
-Customized docker image for Zabbix 3.0 based on [monitoringartist/zabbix-3.0-xxl](https://hub.docker.com/r/monitoringartist/zabbix-3.0-xxl/)
+# zabbix
+Customized docker image for Zabbix based on [monitoringartist/zabbix-xxl](https://hub.docker.com/r/monitoringartist/zabbix-xxl/)
 
-[![Build Status](https://travis-ci.org/uyorum/zabbix-3.0.svg?branch=master)](https://travis-ci.org/uyorum/zabbix-3.0)
+[![Build Status](https://travis-ci.org/uyorum/zabbix.svg?branch=master)](https://travis-ci.org/uyorum/zabbix)
 
 ## Customizations
 ### [uyorum/zabbix-alert-slack](https://github.com/uyorum/zabbix-alert-slack)
@@ -10,7 +10,7 @@ Customized docker image for Zabbix 3.0 based on [monitoringartist/zabbix-3.0-xxl
 
 ## Usage
 
-Same as [the base image](https://hub.docker.com/r/monitoringartist/zabbix-3.0-xxl/)
+Same as [the base image](https://hub.docker.com/r/monitoringartist/zabbix-xxl/)
 
 ``` shell
 docker run \
@@ -23,5 +23,5 @@ docker run \
     --env="ZS_DBHost=zabbix.db" \
     --env="ZS_DBUser=zabbix" \
     --env="ZS_DBPassword=my_password" \
-    uyorum/zabbix-3.0:latest
+    uyorum/zabbix:latest
 ```

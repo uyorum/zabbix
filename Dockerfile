@@ -1,4 +1,4 @@
-FROM monitoringartist/zabbix-3.0-xxl
+FROM monitoringartist/zabbix-xxl:latest
 
 MAINTAINER uyorum uyorum.pub@gmail.com
 
